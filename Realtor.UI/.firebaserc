@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "RealtorSite-angular": {
+      "hosting": {
+        "RealtorSite": [
+          "RealtorSite-angular"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "realtorsite-52775"
+  }
+}

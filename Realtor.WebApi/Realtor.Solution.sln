@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Realtor.Api", "Realtor.Api\Realtor.Api.csproj", "{1D95A1C5-6F49-4CE4-B958-30DDB8C6F2CF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BB5E8D5E-91BB-41EF-AF53-E51B7067D200} = {BB5E8D5E-91BB-41EF-AF53-E51B7067D200}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Realtor.Application", "Realtor.Application\Realtor.Application.csproj", "{BB5E8D5E-91BB-41EF-AF53-E51B7067D200}"
+	ProjectSection(ProjectDependencies) = postProject
+		{934836E8-B5D2-414E-AC5C-257AEA7D0965} = {934836E8-B5D2-414E-AC5C-257AEA7D0965}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{86FF1E2C-EE09-49C8-B413-F28EDA829A1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F1E13D10-8928-4309-BBDA-3DEC07F3AC23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Realtor.Core", "Realtor.Core\Realtor.Core.csproj", "{33141990-BE5E-43F7-B890-543E342684C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Realtor.Data", "Realtor.Data\Realtor.Data.csproj", "{934836E8-B5D2-414E-AC5C-257AEA7D0965}"
+	ProjectSection(ProjectDependencies) = postProject
+		{33141990-BE5E-43F7-B890-543E342684C5} = {33141990-BE5E-43F7-B890-543E342684C5}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D95A1C5-6F49-4CE4-B958-30DDB8C6F2CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D95A1C5-6F49-4CE4-B958-30DDB8C6F2CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D95A1C5-6F49-4CE4-B958-30DDB8C6F2CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D95A1C5-6F49-4CE4-B958-30DDB8C6F2CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB5E8D5E-91BB-41EF-AF53-E51B7067D200}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB5E8D5E-91BB-41EF-AF53-E51B7067D200}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB5E8D5E-91BB-41EF-AF53-E51B7067D200}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB5E8D5E-91BB-41EF-AF53-E51B7067D200}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33141990-BE5E-43F7-B890-543E342684C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33141990-BE5E-43F7-B890-543E342684C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33141990-BE5E-43F7-B890-543E342684C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33141990-BE5E-43F7-B890-543E342684C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{934836E8-B5D2-414E-AC5C-257AEA7D0965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{934836E8-B5D2-414E-AC5C-257AEA7D0965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{934836E8-B5D2-414E-AC5C-257AEA7D0965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{934836E8-B5D2-414E-AC5C-257AEA7D0965}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1D95A1C5-6F49-4CE4-B958-30DDB8C6F2CF} = {86FF1E2C-EE09-49C8-B413-F28EDA829A1E}
+		{BB5E8D5E-91BB-41EF-AF53-E51B7067D200} = {86FF1E2C-EE09-49C8-B413-F28EDA829A1E}
+		{33141990-BE5E-43F7-B890-543E342684C5} = {86FF1E2C-EE09-49C8-B413-F28EDA829A1E}
+		{934836E8-B5D2-414E-AC5C-257AEA7D0965} = {86FF1E2C-EE09-49C8-B413-F28EDA829A1E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0EF0BBC-342B-4842-8D08-C5C26B58EBD5}
+	EndGlobalSection
+EndGlobal

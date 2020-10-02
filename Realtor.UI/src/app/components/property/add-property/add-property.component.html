@@ -1,0 +1,84 @@
+<div class="container">
+    <mat-toolbar>
+        <span class="fill-remaining-space"></span>
+        <span>Add Property</span>
+        <span class="fill-remaining-space"></span>
+    </mat-toolbar>
+    <form [formGroup]="form" class="normal-form" (ngSubmit)="onSubmit()">
+        <mat-grid-list cols="1" rowHeight="350px">
+            <mat-grid-tile>
+                <div class="control-container firstGroup">
+                    <mat-form-field>
+                        <input formControlName="mlsNumber" matInput placeholder="MLS Number">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="street1" matInput placeholder="Street #">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="street2" matInput placeholder="Street">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="city" matInput placeholder="City">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="state" matInput placeholder="State">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="zipCode" matInput placeholder="Zip Code">
+                    </mat-form-field>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="1" rowHeight="300px">
+            <mat-grid-tile>
+                <div class="control-container secondGroup">
+                    <mat-form-field>
+                        <input formControlName="neighborhood" matInput placeholder="Neighborhood">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="salesPrice" matInput placeholder="Sales Price">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="bedrooms" matInput placeholder="Bedrooms">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="bathrooms" matInput placeholder="Bathrooms">
+                    </mat-form-field>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="1" rowHeight="400px">
+            <mat-grid-tile>
+                <div class="control-container thirdGroup">
+                    <mat-form-field>
+                        <input formControlName="garageSize" matInput placeholder="Garage Size">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="squareFeet" matInput placeholder="Square Feet">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="lotSize" matInput placeholder="Lot Size">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="description" matInput placeholder="Description">
+                    </mat-form-field>
+                    <div class="photoUpload">
+                        <label>Upload Photo:</label>
+                        <input (change)="onUpload($event)"  formControlName="photoUrl"
+                                            class="form-control" type="file" name="photo"
+                                            accept="image/x-png,image/gif,image/jpeg"/>
+                    </div>
+                    <div class="IsActive">
+                        <mat-checkbox formControlName="isActive" [(ngModel)]="checked">Is Active?</mat-checkbox>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    <div class="button-row">
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+    <button mat-raised-button color="warn">Clear</button>
+    </div>
+</form>
+</div>
+
+

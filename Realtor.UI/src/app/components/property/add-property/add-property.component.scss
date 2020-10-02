@@ -1,0 +1,41 @@
+
+.fill-remaining-space{
+    flex: 1 1 auto;
+}
+
+form.normal-form{
+    margin: 10px;
+}
+
+.control-container > * {
+    width: 100%;
+}
+
+.control-container.firstGroup {
+    padding-top: 30px;
+}
+
+.control-container.secondGroup {
+    padding-top: 10px;
+    width: 100%;
+}
+.control-container.thirdGroup {
+    padding-top: 10px;
+    width: 100%;
+}
+
+.mat-toolbar {
+    background-color: rgb(12, 113, 196);
+}
+
+.photoUpload {
+    margin-bottom: 50px;
+}
+
+.mat-raised-button {
+    position: relative;
+    margin-right: 25px;
+    margin-bottom: 100px;
+}
+
+

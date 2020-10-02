@@ -1,0 +1,36 @@
+<div class="bg-user-login">
+<div class="row">
+  <div class="col-6 m-auto">
+    <div class="card m-auto">
+      <div class="card-header">
+        Login
+      </div>
+      <div class="card-body">
+        <form #loginForm='ngForm' (ngSubmit)="onLogin(loginForm)">
+          <div class="form-group col-12">
+            <label>Email</label>
+            <input class="form-control" required ngModel name="email">
+          </div>
+
+          <div class="form-group col-12">
+            <label>Password</label>
+            <input class="form-control" required type="password" ngModel name="password">
+          </div>
+          <div class="form-group col-12"><a href="#">Forgot Password</a></div>
+          <div class="form-group col-12">
+            <button [disabled]="!loginForm.valid" type="submit" class="btn btn-primary">Login</button>
+          </div>
+        </form>
+        <div class="social col-12">
+          <button class="fa fa-facebook" (click)="signInWithFacebook()"></button>
+          <button class="fa fa-twitter" (click)="signInWithTwitter()"></button>
+          <button class="fa fa-google" (click)="signInWithGoogle()"></button>
+          <button class="fa fa-github" (click)="signInWithGithub()"></button>
+        </div>
+      </div>
+      </div>
+  </div>
+</div>
+
+
+

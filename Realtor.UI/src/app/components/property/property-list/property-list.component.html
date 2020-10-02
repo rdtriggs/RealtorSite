@@ -1,0 +1,91 @@
+<button class="mdc-button">
+  <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+  <span class="mdc-button__label" routerLink="/add-property">Add Property</span>
+</button>
+
+<table mat-table [dataSource]="LocationList" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="street1">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.street1}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="street2">
+    <th mat-header-cell *matHeaderCellDef> Street </th>
+    <td mat-cell *matCellDef="let element"> {{element.street2}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="city">
+    <th mat-header-cell *matHeaderCellDef> City </th>
+    <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="state">
+    <th mat-header-cell *matHeaderCellDef> State </th>
+    <td mat-cell *matCellDef="let element"> {{element.state}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="zipCode">
+    <th mat-header-cell *matHeaderCellDef> Zip Code </th>
+    <td mat-cell *matCellDef="let element"> {{element.zipCode}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="salesPrice">
+    <th mat-header-cell *matHeaderCellDef> Sales Price </th>
+    <td mat-cell *matCellDef="let element"> ${{element.salesPrice}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="neighborhood">
+    <th mat-header-cell *matHeaderCellDef> Neighborhood </th>
+    <td mat-cell *matCellDef="let element"> {{element.neighborhood}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef> Delete </th>
+    <td mat-cell *matCellDef="let element"><mat-button><mat-icon (click)="deleteLocation(element)">delete</mat-icon></mat-button></td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+<div class="row mat-padding">
+  <div *ngFor="let location of LocationList"
+  class="col-sm-4">
+    <div class='mat-padding' layout="row" layout-wrap>
+      <mat-card>
+        <img mat-card-image src={{location.photoUrl}} alt="House Photo">
+        <mat-card-content>
+          <h2>{{location.street1}} {{location.street2}}</h2>
+          <p>{{location.description}}</p>
+        </mat-card-content>
+        <div class="md-actions" layout="row" layout-align="end center">
+          <button mat-button>Edit</button>
+          <button mat-button>View</button>
+        </div>
+      </mat-card>
+    </div>
+</div>
+</div>
+
+
+<!-- <button type="button" (click)="openModel()">Open Modal</button>
+
+<div #myModel class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+        <h5 class="modal-title ">Title</h5>
+        <button type="button" class="close" (click)="closeModel()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
